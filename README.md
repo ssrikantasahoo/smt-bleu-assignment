@@ -613,11 +613,8 @@ opus_read -d OpenSubtitles -s en -t hi -w corpus -wm moses
 
 **Developed for:** Assignment 2 - Statistical Machine Translation with BLEU Evaluation  
 **Language Pair:** English → Hindi  
-**Author:** [Your Name]  
+**Author:** Srikanta Sahoo  
 **Date:** January 2026
 
 ---
 
-## License
-
-This project is for educational purposes.
