@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Local data (optional, but usually good to ignore large data folders if they can be re-downloaded)
+# data/ 
+# For this specific project, keeping data/ might be intended if it's small, 
+# but often ignored. I'll leave it commented out for now.

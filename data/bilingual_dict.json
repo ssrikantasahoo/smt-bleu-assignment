@@ -1,0 +1,589 @@
+{
+  "hello": [
+    "bonjour",
+    "salut"
+  ],
+  "world": [
+    "monde"
+  ],
+  "the": [
+    "le",
+    "la",
+    "les"
+  ],
+  "cat": [
+    "chat"
+  ],
+  "dog": [
+    "chien"
+  ],
+  "is": [
+    "est"
+  ],
+  "are": [
+    "sont"
+  ],
+  "on": [
+    "sur"
+  ],
+  "in": [
+    "dans"
+  ],
+  "at": [
+    "à"
+  ],
+  "mat": [
+    "tapis"
+  ],
+  "table": [
+    "table"
+  ],
+  "house": [
+    "maison"
+  ],
+  "book": [
+    "livre"
+  ],
+  "car": [
+    "voiture"
+  ],
+  "blue": [
+    "bleu"
+  ],
+  "red": [
+    "rouge"
+  ],
+  "green": [
+    "vert"
+  ],
+  "yellow": [
+    "jaune"
+  ],
+  "black": [
+    "noir"
+  ],
+  "white": [
+    "blanc"
+  ],
+  "big": [
+    "grand",
+    "gros"
+  ],
+  "small": [
+    "petit"
+  ],
+  "good": [
+    "bon",
+    "bien"
+  ],
+  "bad": [
+    "mauvais"
+  ],
+  "man": [
+    "homme"
+  ],
+  "woman": [
+    "femme"
+  ],
+  "boy": [
+    "garçon"
+  ],
+  "girl": [
+    "fille"
+  ],
+  "child": [
+    "enfant"
+  ],
+  "children": [
+    "enfants"
+  ],
+  "eat": [
+    "manger"
+  ],
+  "drink": [
+    "boire"
+  ],
+  "run": [
+    "courir"
+  ],
+  "walk": [
+    "marcher"
+  ],
+  "sleep": [
+    "dormir"
+  ],
+  "work": [
+    "travailler"
+  ],
+  "play": [
+    "jouer"
+  ],
+  "read": [
+    "lire"
+  ],
+  "write": [
+    "écrire"
+  ],
+  "speak": [
+    "parler"
+  ],
+  "listen": [
+    "écouter"
+  ],
+  "see": [
+    "voir"
+  ],
+  "look": [
+    "regarder"
+  ],
+  "hear": [
+    "entendre"
+  ],
+  "today": [
+    "aujourd'hui"
+  ],
+  "yesterday": [
+    "hier"
+  ],
+  "tomorrow": [
+    "demain"
+  ],
+  "now": [
+    "maintenant"
+  ],
+  "later": [
+    "plus tard"
+  ],
+  "yes": [
+    "oui"
+  ],
+  "no": [
+    "non"
+  ],
+  "please": [
+    "s'il vous plaît"
+  ],
+  "thank": [
+    "merci"
+  ],
+  "thanks": [
+    "merci"
+  ],
+  "you": [
+    "vous",
+    "tu"
+  ],
+  "i": [
+    "je"
+  ],
+  "we": [
+    "nous"
+  ],
+  "they": [
+    "ils",
+    "elles"
+  ],
+  "he": [
+    "il"
+  ],
+  "she": [
+    "elle"
+  ],
+  "it": [
+    "il",
+    "elle",
+    "ce"
+  ],
+  "my": [
+    "mon",
+    "ma",
+    "mes"
+  ],
+  "your": [
+    "votre",
+    "ton",
+    "ta"
+  ],
+  "his": [
+    "son",
+    "sa"
+  ],
+  "her": [
+    "son",
+    "sa"
+  ],
+  "our": [
+    "notre",
+    "nos"
+  ],
+  "their": [
+    "leur",
+    "leurs"
+  ],
+  "this": [
+    "ce",
+    "ceci"
+  ],
+  "that": [
+    "cela",
+    "ça"
+  ],
+  "these": [
+    "ces"
+  ],
+  "those": [
+    "ces"
+  ],
+  "here": [
+    "ici"
+  ],
+  "there": [
+    "là"
+  ],
+  "where": [
+    "où"
+  ],
+  "when": [
+    "quand"
+  ],
+  "what": [
+    "quoi",
+    "que"
+  ],
+  "who": [
+    "qui"
+  ],
+  "why": [
+    "pourquoi"
+  ],
+  "how": [
+    "comment"
+  ],
+  "very": [
+    "très"
+  ],
+  "too": [
+    "trop",
+    "aussi"
+  ],
+  "also": [
+    "aussi"
+  ],
+  "not": [
+    "ne",
+    "pas"
+  ],
+  "never": [
+    "jamais"
+  ],
+  "always": [
+    "toujours"
+  ],
+  "sometimes": [
+    "parfois"
+  ],
+  "often": [
+    "souvent"
+  ],
+  "with": [
+    "avec"
+  ],
+  "without": [
+    "sans"
+  ],
+  "for": [
+    "pour"
+  ],
+  "from": [
+    "de"
+  ],
+  "to": [
+    "à"
+  ],
+  "of": [
+    "de"
+  ],
+  "and": [
+    "et"
+  ],
+  "or": [
+    "ou"
+  ],
+  "but": [
+    "mais"
+  ],
+  "because": [
+    "parce que"
+  ],
+  "if": [
+    "si"
+  ],
+  "then": [
+    "alors"
+  ],
+  "so": [
+    "donc"
+  ],
+  "one": [
+    "un",
+    "une"
+  ],
+  "two": [
+    "deux"
+  ],
+  "three": [
+    "trois"
+  ],
+  "four": [
+    "quatre"
+  ],
+  "five": [
+    "cinq"
+  ],
+  "six": [
+    "six"
+  ],
+  "seven": [
+    "sept"
+  ],
+  "eight": [
+    "huit"
+  ],
+  "nine": [
+    "neuf"
+  ],
+  "ten": [
+    "dix"
+  ],
+  "first": [
+    "premier"
+  ],
+  "second": [
+    "deuxième"
+  ],
+  "last": [
+    "dernier"
+  ],
+  "next": [
+    "prochain"
+  ],
+  "new": [
+    "nouveau"
+  ],
+  "old": [
+    "vieux",
+    "ancien"
+  ],
+  "young": [
+    "jeune"
+  ],
+  "long": [
+    "long"
+  ],
+  "short": [
+    "court"
+  ],
+  "tall": [
+    "grand"
+  ],
+  "high": [
+    "haut"
+  ],
+  "low": [
+    "bas"
+  ],
+  "hot": [
+    "chaud"
+  ],
+  "cold": [
+    "froid"
+  ],
+  "warm": [
+    "chaud"
+  ],
+  "cool": [
+    "frais"
+  ],
+  "happy": [
+    "heureux",
+    "content"
+  ],
+  "sad": [
+    "triste"
+  ],
+  "angry": [
+    "en colère"
+  ],
+  "tired": [
+    "fatigué"
+  ],
+  "hungry": [
+    "affamé"
+  ],
+  "thirsty": [
+    "assoiffé"
+  ],
+  "food": [
+    "nourriture"
+  ],
+  "water": [
+    "eau"
+  ],
+  "coffee": [
+    "café"
+  ],
+  "tea": [
+    "thé"
+  ],
+  "bread": [
+    "pain"
+  ],
+  "meat": [
+    "viande"
+  ],
+  "fish": [
+    "poisson"
+  ],
+  "fruit": [
+    "fruit"
+  ],
+  "vegetable": [
+    "légume"
+  ],
+  "time": [
+    "temps",
+    "heure"
+  ],
+  "day": [
+    "jour"
+  ],
+  "night": [
+    "nuit"
+  ],
+  "morning": [
+    "matin"
+  ],
+  "afternoon": [
+    "après-midi"
+  ],
+  "evening": [
+    "soir"
+  ],
+  "week": [
+    "semaine"
+  ],
+  "month": [
+    "mois"
+  ],
+  "year": [
+    "année",
+    "an"
+  ],
+  "city": [
+    "ville"
+  ],
+  "country": [
+    "pays"
+  ],
+  "street": [
+    "rue"
+  ],
+  "road": [
+    "route"
+  ],
+  "friend": [
+    "ami"
+  ],
+  "family": [
+    "famille"
+  ],
+  "father": [
+    "père"
+  ],
+  "mother": [
+    "mère"
+  ],
+  "brother": [
+    "frère"
+  ],
+  "sister": [
+    "sœur"
+  ],
+  "son": [
+    "fils"
+  ],
+  "daughter": [
+    "fille"
+  ],
+  "love": [
+    "amour",
+    "aimer"
+  ],
+  "like": [
+    "aimer"
+  ],
+  "want": [
+    "vouloir"
+  ],
+  "need": [
+    "avoir besoin"
+  ],
+  "have": [
+    "avoir"
+  ],
+  "has": [
+    "a"
+  ],
+  "had": [
+    "avait"
+  ],
+  "make": [
+    "faire"
+  ],
+  "made": [
+    "fait"
+  ],
+  "take": [
+    "prendre"
+  ],
+  "give": [
+    "donner"
+  ],
+  "get": [
+    "obtenir"
+  ],
+  "go": [
+    "aller"
+  ],
+  "come": [
+    "venir"
+  ],
+  "know": [
+    "savoir",
+    "connaître"
+  ],
+  "think": [
+    "penser"
+  ],
+  "can": [
+    "pouvoir"
+  ],
+  "will": [
+    "volonté"
+  ],
+  "would": [
+    "voudrais"
+  ],
+  "should": [
+    "devrait"
+  ],
+  "must": [
+    "doit"
+  ],
+  "may": [
+    "peut"
+  ],
+  "might": [
+    "pourrait"
+  ]
+}

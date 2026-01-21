@@ -1,0 +1,144 @@
+{
+  "train": [
+    {
+      "en": "Hello, how are you?",
+      "hi": "नमस्ते, आप कैसे हैं?"
+    },
+    {
+      "en": "I love programming.",
+      "hi": "मुझे प्रोग्रामिंग पसंद है।"
+    },
+    {
+      "en": "The weather is nice today.",
+      "hi": "आज मौसम अच्छा है।"
+    },
+    {
+      "en": "What is your name?",
+      "hi": "आपका नाम क्या है?"
+    },
+    {
+      "en": "This is a pen.",
+      "hi": "यह एक पेन है।"
+    },
+    {
+      "en": "She is reading a book.",
+      "hi": "वह एक किताब पढ़ रही है।"
+    },
+    {
+      "en": "We will meet tomorrow.",
+      "hi": "हम कल मिलेंगे।"
+    },
+    {
+      "en": "Can you help me?",
+      "hi": "क्या आप मेरी मदद कर सकते हैं?"
+    },
+    {
+      "en": "I live in New Delhi.",
+      "hi": "मैं नई दिल्ली में रहता हूँ।"
+    },
+    {
+      "en": "Open the door, please.",
+      "hi": "कृपया दरवाज़ा खोलें।"
+    },
+    {
+      "en": "Thank you very much.",
+      "hi": "बहुत बहुत धन्यवाद।"
+    },
+    {
+      "en": "Good morning!",
+      "hi": "सुप्रभात!"
+    },
+    {
+      "en": "I am learning Hindi.",
+      "hi": "मैं हिंदी सीख रहा हूँ।"
+    },
+    {
+      "en": "Where is the market?",
+      "hi": "बाज़ार कहाँ है?"
+    },
+    {
+      "en": "The food is delicious.",
+      "hi": "खाना स्वादिष्ट है।"
+    }
+  ],
+  "dev": [
+    {
+      "en": "How much does this cost?",
+      "hi": "इसकी कीमत क्या है?"
+    },
+    {
+      "en": "I need a taxi.",
+      "hi": "मुझे टैक्सी चाहिए।"
+    },
+    {
+      "en": "Please speak slowly.",
+      "hi": "कृपया धीरे बोलें।"
+    }
+  ],
+  "test": [
+    {
+      "en": "What time is it?",
+      "hi": "अभी क्या समय है?"
+    },
+    {
+      "en": "I don't understand.",
+      "hi": "मुझे समझ नहीं आया।"
+    },
+    {
+      "en": "Have a nice day!",
+      "hi": "आपका दिन शुभ हो!"
+    }
+  ],
+  "references": [
+    {
+      "id": "ref_01",
+      "en": "Hello, how are you?",
+      "hi": ["नमस्ते, आप कैसे हैं?", "हैलो, आप कैसे हैं?"]
+    },
+    {
+      "id": "ref_02",
+      "en": "I love programming.",
+      "hi": ["मुझे प्रोग्रामिंग पसंद है।", "मैं प्रोग्रामिंग से प्यार करता हूँ।"]
+    },
+    {
+      "id": "ref_03",
+      "en": "The weather is nice today.",
+      "hi": ["आज मौसम अच्छा है।", "आज का मौसम सुहावना है।"]
+    },
+    {
+      "id": "ref_04",
+      "en": "What is your name?",
+      "hi": ["आपका नाम क्या है?", "आप का नाम क्या है?"]
+    },
+    {
+      "id": "ref_05",
+      "en": "This is a pen.",
+      "hi": ["यह एक पेन है।", "यह पेन है।"]
+    },
+    {
+      "id": "ref_06",
+      "en": "She is reading a book.",
+      "hi": ["वह एक किताब पढ़ रही है।", "वह किताब पढ़ रही है।"]
+    },
+    {
+      "id": "ref_07",
+      "en": "We will meet tomorrow.",
+      "hi": ["हम कल मिलेंगे।", "हम कल मुलाकात करेंगे।"]
+    },
+    {
+      "id": "ref_08",
+      "en": "Can you help me?",
+      "hi": ["क्या आप मेरी मदद कर सकते हैं?", "क्या आप मेरी सहायता कर सकते हैं?"]
+    },
+    {
+      "id": "ref_09",
+      "en": "I live in New Delhi.",
+      "hi": ["मैं नई दिल्ली में रहता हूँ।", "मैं नई दिल्ली में रहती हूँ।"]
+    },
+    {
+      "id": "ref_10",
+      "en": "Open the door, please.",
+      "hi": ["कृपया दरवाज़ा खोलें।", "दरवाज़ा खोलिए।"]
+    }
+  ]
+}

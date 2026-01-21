@@ -1,0 +1,76 @@
+{
+  "samples": [
+    {
+      "id": 1,
+      "source": "the cat is on the mat",
+      "references": [
+        "बिल्ली चटाई पर है",
+        "बिल्ली है चटाई पर"
+      ],
+      "description": "Simple sentence with spatial relation"
+    },
+    {
+      "id": 2,
+      "source": "hello world",
+      "references": [
+        "नमस्ते दुनिया",
+        "हैलो संसार"
+      ],
+      "description": "Classic greeting"
+    },
+    {
+      "id": 3,
+      "source": "thank you very much",
+      "references": [
+        "बहुत बहुत धन्यवाद",
+        "बहुत धन्यवाद"
+      ],
+      "description": "Polite expression"
+    },
+    {
+      "id": 4,
+      "source": "i love this book",
+      "references": [
+        "मुझे यह किताब बहुत पसंद है",
+        "मैं इस किताब से प्यार करता हूँ"
+      ],
+      "description": "Expression of preference"
+    },
+    {
+      "id": 5,
+      "source": "the big dog runs in the house",
+      "references": [
+        "बड़ा कुत्ता घर में दौड़ता है",
+        "बड़ा कुत्ता घर के अंदर दौड़ता है"
+      ],
+      "description": "Complex sentence with adjective and location"
+    },
+    {
+      "id": 6,
+      "source": "good morning",
+      "references": [
+        "सुप्रभात",
+        "शुभ प्रभात"
+      ],
+      "description": "Morning greeting"
+    },
+    {
+      "id": 7,
+      "source": "the child eats bread",
+      "references": [
+        "बच्चा रोटी खाता है",
+        "बच्चा रोटी खा रहा है"
+      ],
+      "description": "Simple action sentence"
+    },
+    {
+      "id": 8,
+      "source": "my friend is happy today",
+      "references": [
+        "मेरा दोस्त आज खुश है",
+        "मेरा मित्र आज प्रसन्न है"
+      ],
+      "description": "Sentence with possessive and temporal adverb"
+    }
+  ]
+}

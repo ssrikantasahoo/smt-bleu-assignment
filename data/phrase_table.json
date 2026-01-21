@@ -1,0 +1,346 @@
+{
+  "hello": [
+    [
+      "bonjour",
+      0.8
+    ],
+    [
+      "salut",
+      0.2
+    ]
+  ],
+  "world": [
+    [
+      "monde",
+      0.9
+    ]
+  ],
+  "the": [
+    [
+      "le",
+      0.4
+    ],
+    [
+      "la",
+      0.4
+    ],
+    [
+      "les",
+      0.2
+    ]
+  ],
+  "cat": [
+    [
+      "chat",
+      0.9
+    ]
+  ],
+  "dog": [
+    [
+      "chien",
+      0.9
+    ]
+  ],
+  "is": [
+    [
+      "est",
+      0.9
+    ]
+  ],
+  "on": [
+    [
+      "sur",
+      0.8
+    ]
+  ],
+  "in": [
+    [
+      "dans",
+      0.8
+    ]
+  ],
+  "mat": [
+    [
+      "tapis",
+      0.9
+    ]
+  ],
+  "table": [
+    [
+      "table",
+      0.9
+    ]
+  ],
+  "house": [
+    [
+      "maison",
+      0.9
+    ]
+  ],
+  "book": [
+    [
+      "livre",
+      0.9
+    ]
+  ],
+  "car": [
+    [
+      "voiture",
+      0.9
+    ]
+  ],
+  "blue": [
+    [
+      "bleu",
+      0.7
+    ],
+    [
+      "bleue",
+      0.3
+    ]
+  ],
+  "red": [
+    [
+      "rouge",
+      0.9
+    ]
+  ],
+  "big": [
+    [
+      "grand",
+      0.5
+    ],
+    [
+      "grande",
+      0.3
+    ],
+    [
+      "gros",
+      0.2
+    ]
+  ],
+  "small": [
+    [
+      "petit",
+      0.5
+    ],
+    [
+      "petite",
+      0.4
+    ]
+  ],
+  "good": [
+    [
+      "bon",
+      0.5
+    ],
+    [
+      "bonne",
+      0.3
+    ],
+    [
+      "bien",
+      0.2
+    ]
+  ],
+  "man": [
+    [
+      "homme",
+      0.9
+    ]
+  ],
+  "woman": [
+    [
+      "femme",
+      0.9
+    ]
+  ],
+  "child": [
+    [
+      "enfant",
+      0.9
+    ]
+  ],
+  "eat": [
+    [
+      "manger",
+      0.9
+    ]
+  ],
+  "drink": [
+    [
+      "boire",
+      0.9
+    ]
+  ],
+  "run": [
+    [
+      "courir",
+      0.9
+    ]
+  ],
+  "walk": [
+    [
+      "marcher",
+      0.9
+    ]
+  ],
+  "today": [
+    [
+      "aujourd'hui",
+      0.9
+    ]
+  ],
+  "yesterday": [
+    [
+      "hier",
+      0.9
+    ]
+  ],
+  "tomorrow": [
+    [
+      "demain",
+      0.9
+    ]
+  ],
+  "yes": [
+    [
+      "oui",
+      0.9
+    ]
+  ],
+  "no": [
+    [
+      "non",
+      0.9
+    ]
+  ],
+  "please": [
+    [
+      "s'il vous plaît",
+      0.6
+    ],
+    [
+      "s'il te plaît",
+      0.3
+    ]
+  ],
+  "thank": [
+    [
+      "merci",
+      0.9
+    ]
+  ],
+  "you": [
+    [
+      "vous",
+      0.5
+    ],
+    [
+      "tu",
+      0.3
+    ],
+    [
+      "toi",
+      0.2
+    ]
+  ],
+  "i": [
+    [
+      "je",
+      0.7
+    ],
+    [
+      "j'",
+      0.3
+    ]
+  ],
+  "we": [
+    [
+      "nous",
+      0.9
+    ]
+  ],
+  "they": [
+    [
+      "ils",
+      0.5
+    ],
+    [
+      "elles",
+      0.4
+    ]
+  ],
+  "the cat": [
+    [
+      "le chat",
+      0.9
+    ]
+  ],
+  "the dog": [
+    [
+      "le chien",
+      0.9
+    ]
+  ],
+  "on the": [
+    [
+      "sur le",
+      0.5
+    ],
+    [
+      "sur la",
+      0.4
+    ]
+  ],
+  "in the": [
+    [
+      "dans le",
+      0.5
+    ],
+    [
+      "dans la",
+      0.4
+    ]
+  ],
+  "thank you": [
+    [
+      "merci",
+      0.9
+    ]
+  ],
+  "good morning": [
+    [
+      "bonjour",
+      0.9
+    ]
+  ],
+  "good evening": [
+    [
+      "bonsoir",
+      0.9
+    ]
+  ],
+  "good night": [
+    [
+      "bonne nuit",
+      0.9
+    ]
+  ],
+  "how are": [
+    [
+      "comment allez",
+      0.5
+    ],
+    [
+      "comment vas",
+      0.4
+    ]
+  ],
+  "i am": [
+    [
+      "je suis",
+      0.9
+    ]
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "1": {
+    "le": 0.05,
+    "la": 0.04,
+    "les": 0.03,
+    "chat": 0.01,
+    "chien": 0.01,
+    "est": 0.02,
+    "sur": 0.015,
+    "dans": 0.015,
+    "tapis": 0.005,
+    "bonjour": 0.01,
+    "monde": 0.005,
+    "table": 0.008,
+    "maison": 0.008,
+    "livre": 0.007,
+    "voiture": 0.006,
+    "bleu": 0.005,
+    "rouge": 0.005,
+    "grand": 0.005,
+    "petit": 0.005,
+    "bon": 0.005,
+    "homme": 0.008,
+    "femme": 0.008,
+    "enfant": 0.007,
+    "merci": 0.01,
+    "oui": 0.01,
+    "non": 0.01
+  },
+  "2": {
+    "le chat": 0.3,
+    "le chien": 0.25,
+    "la table": 0.2,
+    "sur le": 0.3,
+    "sur la": 0.25,
+    "dans le": 0.3,
+    "dans la": 0.25,
+    "est sur": 0.2,
+    "chat est": 0.15,
+    "bonjour le": 0.1,
+    "merci beaucoup": 0.5
+  },
+  "3": {
+    "le chat est": 0.4,
+    "est sur le": 0.3,
+    "sur le tapis": 0.5,
+    "dans la maison": 0.4
+  }
+}
