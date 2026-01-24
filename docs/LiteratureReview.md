@@ -713,15 +713,3 @@ See `references.bib` for complete BibTeX entries.
 11. Mathur et al. (2020): Metric meta-evaluation
 12. Post (2018): BLEU reporting standards
 
----
-
-**Document Statistics**:
-- **Word Count**: ~5,500 words
-- **Sections**: 8 major sections
-- **Tables**: 3 comparative tables
-- **Figures**: 0 (can add for PDF version)
-- **References**: 16 peer-reviewed papers
-- **Page Count**: ~15-18 pages (PDF)
-
-**Status**: Ready for Submission
-**Last Updated**: January 2026

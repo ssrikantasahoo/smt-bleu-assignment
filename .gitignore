@@ -11,6 +11,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.claude/
+Test123/
 
 # Testing
 .pytest_cache/
