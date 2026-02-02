@@ -1,346 +1,385 @@
 {
   "hello": [
-    [
-      "bonjour",
-      0.8
-    ],
-    [
-      "salut",
-      0.2
-    ]
+    {"phrase": "नमस्ते", "prob": 0.8},
+    {"phrase": "हैलो", "prob": 0.2}
   ],
-  "world": [
-    [
-      "monde",
-      0.9
-    ]
+  "how": [
+    {"phrase": "कैसे", "prob": 0.7},
+    {"phrase": "कैसा", "prob": 0.3}
   ],
-  "the": [
-    [
-      "le",
-      0.4
-    ],
-    [
-      "la",
-      0.4
-    ],
-    [
-      "les",
-      0.2
-    ]
-  ],
-  "cat": [
-    [
-      "chat",
-      0.9
-    ]
-  ],
-  "dog": [
-    [
-      "chien",
-      0.9
-    ]
-  ],
-  "is": [
-    [
-      "est",
-      0.9
-    ]
-  ],
-  "on": [
-    [
-      "sur",
-      0.8
-    ]
-  ],
-  "in": [
-    [
-      "dans",
-      0.8
-    ]
-  ],
-  "mat": [
-    [
-      "tapis",
-      0.9
-    ]
-  ],
-  "table": [
-    [
-      "table",
-      0.9
-    ]
-  ],
-  "house": [
-    [
-      "maison",
-      0.9
-    ]
-  ],
-  "book": [
-    [
-      "livre",
-      0.9
-    ]
-  ],
-  "car": [
-    [
-      "voiture",
-      0.9
-    ]
-  ],
-  "blue": [
-    [
-      "bleu",
-      0.7
-    ],
-    [
-      "bleue",
-      0.3
-    ]
-  ],
-  "red": [
-    [
-      "rouge",
-      0.9
-    ]
-  ],
-  "big": [
-    [
-      "grand",
-      0.5
-    ],
-    [
-      "grande",
-      0.3
-    ],
-    [
-      "gros",
-      0.2
-    ]
-  ],
-  "small": [
-    [
-      "petit",
-      0.5
-    ],
-    [
-      "petite",
-      0.4
-    ]
-  ],
-  "good": [
-    [
-      "bon",
-      0.5
-    ],
-    [
-      "bonne",
-      0.3
-    ],
-    [
-      "bien",
-      0.2
-    ]
-  ],
-  "man": [
-    [
-      "homme",
-      0.9
-    ]
-  ],
-  "woman": [
-    [
-      "femme",
-      0.9
-    ]
-  ],
-  "child": [
-    [
-      "enfant",
-      0.9
-    ]
-  ],
-  "eat": [
-    [
-      "manger",
-      0.9
-    ]
-  ],
-  "drink": [
-    [
-      "boire",
-      0.9
-    ]
-  ],
-  "run": [
-    [
-      "courir",
-      0.9
-    ]
-  ],
-  "walk": [
-    [
-      "marcher",
-      0.9
-    ]
-  ],
-  "today": [
-    [
-      "aujourd'hui",
-      0.9
-    ]
-  ],
-  "yesterday": [
-    [
-      "hier",
-      0.9
-    ]
-  ],
-  "tomorrow": [
-    [
-      "demain",
-      0.9
-    ]
-  ],
-  "yes": [
-    [
-      "oui",
-      0.9
-    ]
-  ],
-  "no": [
-    [
-      "non",
-      0.9
-    ]
-  ],
-  "please": [
-    [
-      "s'il vous plaît",
-      0.6
-    ],
-    [
-      "s'il te plaît",
-      0.3
-    ]
-  ],
-  "thank": [
-    [
-      "merci",
-      0.9
-    ]
+  "are": [
+    {"phrase": "हैं", "prob": 0.7},
+    {"phrase": "हो", "prob": 0.3}
   ],
   "you": [
-    [
-      "vous",
-      0.5
-    ],
-    [
-      "tu",
-      0.3
-    ],
-    [
-      "toi",
-      0.2
-    ]
+    {"phrase": "आप", "prob": 0.6},
+    {"phrase": "तुम", "prob": 0.3},
+    {"phrase": "तू", "prob": 0.1}
   ],
   "i": [
-    [
-      "je",
-      0.7
-    ],
-    [
-      "j'",
-      0.3
-    ]
+    {"phrase": "मैं", "prob": 0.9},
+    {"phrase": "मुझे", "prob": 0.1}
+  ],
+  "love": [
+    {"phrase": "पसंद", "prob": 0.5},
+    {"phrase": "प्यार", "prob": 0.5}
+  ],
+  "programming": [
+    {"phrase": "प्रोग्रामिंग", "prob": 0.9}
+  ],
+  "the": [
+    {"phrase": "", "prob": 0.9}
+  ],
+  "weather": [
+    {"phrase": "मौसम", "prob": 0.9}
+  ],
+  "is": [
+    {"phrase": "है", "prob": 0.9}
+  ],
+  "nice": [
+    {"phrase": "अच्छा", "prob": 0.7},
+    {"phrase": "सुहावना", "prob": 0.3}
+  ],
+  "today": [
+    {"phrase": "आज", "prob": 0.9}
+  ],
+  "what": [
+    {"phrase": "क्या", "prob": 0.9}
+  ],
+  "your": [
+    {"phrase": "आपका", "prob": 0.6},
+    {"phrase": "तुम्हारा", "prob": 0.4}
+  ],
+  "name": [
+    {"phrase": "नाम", "prob": 0.9}
+  ],
+  "this": [
+    {"phrase": "यह", "prob": 0.9}
+  ],
+  "a": [
+    {"phrase": "एक", "prob": 0.9}
+  ],
+  "an": [
+    {"phrase": "एक", "prob": 0.9}
+  ],
+  "pen": [
+    {"phrase": "पेन", "prob": 0.9}
+  ],
+  "she": [
+    {"phrase": "वह", "prob": 0.9}
+  ],
+  "he": [
+    {"phrase": "वह", "prob": 0.9}
+  ],
+  "reading": [
+    {"phrase": "पढ़ रही", "prob": 0.5},
+    {"phrase": "पढ़ रहा", "prob": 0.3},
+    {"phrase": "पढ़ना", "prob": 0.2}
+  ],
+  "book": [
+    {"phrase": "किताब", "prob": 0.9}
   ],
   "we": [
-    [
-      "nous",
-      0.9
-    ]
+    {"phrase": "हम", "prob": 0.9}
   ],
-  "they": [
-    [
-      "ils",
-      0.5
-    ],
-    [
-      "elles",
-      0.4
-    ]
+  "will": [
+    {"phrase": "", "prob": 0.9}
   ],
-  "the cat": [
-    [
-      "le chat",
-      0.9
-    ]
+  "meet": [
+    {"phrase": "मिलेंगे", "prob": 0.6},
+    {"phrase": "मिलना", "prob": 0.4}
   ],
-  "the dog": [
-    [
-      "le chien",
-      0.9
-    ]
+  "tomorrow": [
+    {"phrase": "कल", "prob": 0.9}
   ],
-  "on the": [
-    [
-      "sur le",
-      0.5
-    ],
-    [
-      "sur la",
-      0.4
-    ]
+  "can": [
+    {"phrase": "सकते", "prob": 0.5},
+    {"phrase": "", "prob": 0.5}
   ],
-  "in the": [
-    [
-      "dans le",
-      0.5
-    ],
-    [
-      "dans la",
-      0.4
-    ]
+  "help": [
+    {"phrase": "मदद", "prob": 0.7},
+    {"phrase": "सहायता", "prob": 0.3}
   ],
-  "thank you": [
-    [
-      "merci",
-      0.9
-    ]
+  "me": [
+    {"phrase": "मुझे", "prob": 0.6},
+    {"phrase": "मेरी", "prob": 0.4}
   ],
-  "good morning": [
-    [
-      "bonjour",
-      0.9
-    ]
+  "live": [
+    {"phrase": "रहता", "prob": 0.5},
+    {"phrase": "रहना", "prob": 0.5}
   ],
-  "good evening": [
-    [
-      "bonsoir",
-      0.9
-    ]
+  "in": [
+    {"phrase": "में", "prob": 0.9}
   ],
-  "good night": [
-    [
-      "bonne nuit",
-      0.9
-    ]
+  "new": [
+    {"phrase": "नई", "prob": 0.5},
+    {"phrase": "नया", "prob": 0.5}
+  ],
+  "delhi": [
+    {"phrase": "दिल्ली", "prob": 0.9}
+  ],
+  "open": [
+    {"phrase": "खोलें", "prob": 0.5},
+    {"phrase": "खोलना", "prob": 0.5}
+  ],
+  "door": [
+    {"phrase": "दरवाज़ा", "prob": 0.9}
+  ],
+  "please": [
+    {"phrase": "कृपया", "prob": 0.9}
+  ],
+  "thank": [
+    {"phrase": "धन्यवाद", "prob": 0.9}
+  ],
+  "very": [
+    {"phrase": "बहुत", "prob": 0.9}
+  ],
+  "much": [
+    {"phrase": "बहुत", "prob": 0.9}
+  ],
+  "good": [
+    {"phrase": "अच्छा", "prob": 0.7},
+    {"phrase": "शुभ", "prob": 0.3}
+  ],
+  "morning": [
+    {"phrase": "सुबह", "prob": 0.5},
+    {"phrase": "सुप्रभात", "prob": 0.5}
+  ],
+  "learning": [
+    {"phrase": "सीख रहा", "prob": 0.5},
+    {"phrase": "सीखना", "prob": 0.5}
+  ],
+  "hindi": [
+    {"phrase": "हिंदी", "prob": 0.9}
+  ],
+  "where": [
+    {"phrase": "कहाँ", "prob": 0.9}
+  ],
+  "market": [
+    {"phrase": "बाज़ार", "prob": 0.9}
+  ],
+  "food": [
+    {"phrase": "खाना", "prob": 0.9}
+  ],
+  "delicious": [
+    {"phrase": "स्वादिष्ट", "prob": 0.9}
+  ],
+  "cost": [
+    {"phrase": "कीमत", "prob": 0.9}
+  ],
+  "need": [
+    {"phrase": "चाहिए", "prob": 0.9}
+  ],
+  "taxi": [
+    {"phrase": "टैक्सी", "prob": 0.9}
+  ],
+  "speak": [
+    {"phrase": "बोलें", "prob": 0.5},
+    {"phrase": "बोलना", "prob": 0.5}
+  ],
+  "slowly": [
+    {"phrase": "धीरे", "prob": 0.9}
+  ],
+  "time": [
+    {"phrase": "समय", "prob": 0.9}
+  ],
+  "understand": [
+    {"phrase": "समझ", "prob": 0.5},
+    {"phrase": "समझना", "prob": 0.5}
+  ],
+  "have": [
+    {"phrase": "", "prob": 0.9}
+  ],
+  "day": [
+    {"phrase": "दिन", "prob": 0.9}
+  ],
+  "don't": [
+    {"phrase": "नहीं", "prob": 0.9}
+  ],
+  "not": [
+    {"phrase": "नहीं", "prob": 0.9}
+  ],
+  "am": [
+    {"phrase": "हूँ", "prob": 0.5},
+    {"phrase": "", "prob": 0.5}
+  ],
+
+  "hello how are you": [
+    {"phrase": "नमस्ते आप कैसे हैं", "prob": 0.9}
+  ],
+  "how are you": [
+    {"phrase": "आप कैसे हैं", "prob": 0.8},
+    {"phrase": "कैसे हो", "prob": 0.2}
   ],
   "how are": [
-    [
-      "comment allez",
-      0.5
-    ],
-    [
-      "comment vas",
-      0.4
-    ]
+    {"phrase": "कैसे हैं", "prob": 0.6},
+    {"phrase": "कैसे हो", "prob": 0.4}
+  ],
+  "i love": [
+    {"phrase": "मुझे पसंद", "prob": 0.6},
+    {"phrase": "मैं प्यार", "prob": 0.4}
+  ],
+  "i love programming": [
+    {"phrase": "मुझे प्रोग्रामिंग पसंद है", "prob": 0.8}
+  ],
+  "the weather": [
+    {"phrase": "मौसम", "prob": 0.9}
+  ],
+  "is nice": [
+    {"phrase": "अच्छा है", "prob": 0.8}
+  ],
+  "nice today": [
+    {"phrase": "अच्छा है आज", "prob": 0.5}
+  ],
+  "what is": [
+    {"phrase": "क्या है", "prob": 0.8}
+  ],
+  "your name": [
+    {"phrase": "आपका नाम", "prob": 0.8},
+    {"phrase": "तुम्हारा नाम", "prob": 0.2}
+  ],
+  "what is your name": [
+    {"phrase": "आपका नाम क्या है", "prob": 0.9}
+  ],
+  "this is": [
+    {"phrase": "यह है", "prob": 0.5},
+    {"phrase": "यह एक", "prob": 0.5}
+  ],
+  "this is a pen": [
+    {"phrase": "यह एक पेन है", "prob": 0.9}
+  ],
+  "she is": [
+    {"phrase": "वह है", "prob": 0.5},
+    {"phrase": "वह", "prob": 0.5}
+  ],
+  "a book": [
+    {"phrase": "एक किताब", "prob": 0.9}
+  ],
+  "reading a book": [
+    {"phrase": "किताब पढ़ रही है", "prob": 0.5},
+    {"phrase": "एक किताब पढ़ रही है", "prob": 0.5}
+  ],
+  "we will": [
+    {"phrase": "हम", "prob": 0.9}
+  ],
+  "will meet": [
+    {"phrase": "मिलेंगे", "prob": 0.9}
+  ],
+  "we will meet tomorrow": [
+    {"phrase": "हम कल मिलेंगे", "prob": 0.9}
+  ],
+  "can you": [
+    {"phrase": "क्या आप", "prob": 0.7},
+    {"phrase": "आप", "prob": 0.3}
+  ],
+  "help me": [
+    {"phrase": "मेरी मदद", "prob": 0.7},
+    {"phrase": "मदद करो", "prob": 0.3}
+  ],
+  "can you help me": [
+    {"phrase": "क्या आप मेरी मदद कर सकते हैं", "prob": 0.9}
+  ],
+  "i live": [
+    {"phrase": "मैं रहता हूँ", "prob": 0.5},
+    {"phrase": "मैं रहती हूँ", "prob": 0.5}
+  ],
+  "i live in": [
+    {"phrase": "मैं में रहता हूँ", "prob": 0.5}
+  ],
+  "new delhi": [
+    {"phrase": "नई दिल्ली", "prob": 0.9}
+  ],
+  "in new delhi": [
+    {"phrase": "नई दिल्ली में", "prob": 0.9}
+  ],
+  "open the door": [
+    {"phrase": "दरवाज़ा खोलें", "prob": 0.9}
+  ],
+  "the door": [
+    {"phrase": "दरवाज़ा", "prob": 0.9}
+  ],
+  "thank you": [
+    {"phrase": "धन्यवाद", "prob": 0.7},
+    {"phrase": "शुक्रिया", "prob": 0.3}
+  ],
+  "thank you very much": [
+    {"phrase": "बहुत बहुत धन्यवाद", "prob": 0.9}
+  ],
+  "very much": [
+    {"phrase": "बहुत", "prob": 0.9}
+  ],
+  "good morning": [
+    {"phrase": "सुप्रभात", "prob": 0.7},
+    {"phrase": "शुभ प्रभात", "prob": 0.3}
   ],
   "i am": [
-    [
-      "je suis",
-      0.9
-    ]
+    {"phrase": "मैं हूँ", "prob": 0.5},
+    {"phrase": "मैं", "prob": 0.5}
+  ],
+  "i am learning": [
+    {"phrase": "मैं सीख रहा हूँ", "prob": 0.9}
+  ],
+  "learning hindi": [
+    {"phrase": "हिंदी सीख रहा", "prob": 0.7}
+  ],
+  "where is": [
+    {"phrase": "कहाँ है", "prob": 0.9}
+  ],
+  "the market": [
+    {"phrase": "बाज़ार", "prob": 0.9}
+  ],
+  "where is the market": [
+    {"phrase": "बाज़ार कहाँ है", "prob": 0.9}
+  ],
+  "the food": [
+    {"phrase": "खाना", "prob": 0.9}
+  ],
+  "food is": [
+    {"phrase": "खाना है", "prob": 0.5}
+  ],
+  "is delicious": [
+    {"phrase": "स्वादिष्ट है", "prob": 0.9}
+  ],
+  "the food is delicious": [
+    {"phrase": "खाना स्वादिष्ट है", "prob": 0.9}
+  ],
+  "how much": [
+    {"phrase": "कितना", "prob": 0.5},
+    {"phrase": "कितनी", "prob": 0.5}
+  ],
+  "does this cost": [
+    {"phrase": "इसकी कीमत है", "prob": 0.7}
+  ],
+  "how much does this cost": [
+    {"phrase": "इसकी कीमत क्या है", "prob": 0.9}
+  ],
+  "i need": [
+    {"phrase": "मुझे चाहिए", "prob": 0.9}
+  ],
+  "i need a taxi": [
+    {"phrase": "मुझे टैक्सी चाहिए", "prob": 0.9}
+  ],
+  "please speak slowly": [
+    {"phrase": "कृपया धीरे बोलें", "prob": 0.9}
+  ],
+  "speak slowly": [
+    {"phrase": "धीरे बोलें", "prob": 0.9}
+  ],
+  "what time": [
+    {"phrase": "क्या समय", "prob": 0.7},
+    {"phrase": "कितने बजे", "prob": 0.3}
+  ],
+  "what time is it": [
+    {"phrase": "अभी क्या समय है", "prob": 0.9}
+  ],
+  "i don't understand": [
+    {"phrase": "मुझे समझ नहीं आया", "prob": 0.9}
+  ],
+  "have a nice day": [
+    {"phrase": "आपका दिन शुभ हो", "prob": 0.9}
+  ],
+  "nice day": [
+    {"phrase": "शुभ दिन", "prob": 0.7},
+    {"phrase": "अच्छा दिन", "prob": 0.3}
   ]
 }

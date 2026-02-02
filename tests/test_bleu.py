@@ -194,12 +194,14 @@ class TestBLEUScore:
         result = compute_bleu(candidate, references, max_n=4)
         # Unigram: 2/2 = 1.0
         # Bigram: 1/1 = 1.0
-        # Trigram: 0/0 = 0.0 (no trigrams in candidate)
-        # 4-gram: 0/0 = 0.0
-        # c=2, r=6, BP = exp(1-3) ≈ 0.135
+        # Trigram: 0/0 (no trigrams in candidate - not counted)
+        # 4-gram: 0/0 (no 4-grams in candidate - not counted)
+        # effective_max_n = min(4, 2) = 2 (only uni+bigrams used)
+        # c=2, r=6, BP = exp(1-3) = 0.135
         assert result['bp'] == pytest.approx(0.135, abs=0.01)
-        # Since trigram and 4-gram have 0 counts, precision is 0, BLEU = 0
-        assert result['bleu_score'] == 0.0
+        # With effective_max_n=2: geo_mean(1.0, 1.0) = 1.0
+        # BLEU = BP * 1.0 = 0.135
+        assert result['bleu_score'] == pytest.approx(0.135, abs=0.01)
     
     def test_hindi_example(self):
         # Test with actual Hindi text
@@ -254,9 +256,11 @@ class TestEdgeCases:
         candidate = "cat"
         references = ["cat"]
         result = compute_bleu(candidate, references, max_n=4)
-        # Unigram matches, but no bi/tri/4-grams possible
-        # BLEU should be 0 due to missing higher-order n-grams
-        assert result['bleu_score'] == 0.0
+        # Unigram matches perfectly, no bi/tri/4-grams possible
+        # effective_max_n = min(4, 1) = 1, so only unigram used
+        # BP = 1.0 (same length), precision = 1.0
+        # BLEU = 1.0 * 1.0 = 1.0
+        assert result['bleu_score'] == 1.0
     
     def test_different_length_candidates(self):
         # Use longer sentences to ensure 4-grams exist
@@ -278,6 +282,20 @@ class TestEdgeCases:
         # Reference has 2 "the"s, candidate has 4
         # Clipped count = 2, total = 4, precision = 0.5
         assert result['precisions'][0] == 0.5
+
+    def test_sentence_bleu_with_smoothing(self):
+        candidate = "the cat sat mat"
+        references = ["the cat sat on the mat"]
+        raw = compute_bleu(candidate, references, max_n=4, smoothing=False)
+        smooth = compute_bleu(candidate, references, max_n=4, smoothing=True, smooth_eps=1e-9)
+        assert smooth['bleu_score'] > raw['bleu_score']
+
+    def test_bleu_score_helper_with_smoothing(self):
+        candidate = "cat"
+        references = ["cat sat"]
+        raw = bleu_score(candidate, references, smoothing=False)
+        smooth = bleu_score(candidate, references, smoothing=True, smooth_eps=1e-9)
+        assert smooth >= raw
 
 
 if __name__ == '__main__':

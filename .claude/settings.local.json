@@ -20,7 +20,9 @@
       "Bash(python auto_capture.py:*)",
       "Bash(pkill:*)",
       "Bash(taskkill:*)",
-      "Bash(./venv/Scripts/python.exe -m pytest tests/test_bleu.py -v --tb=no)"
+      "Bash(./venv/Scripts/python.exe -m pytest tests/test_bleu.py -v --tb=no)",
+      "Bash(python -c:*)",
+      "Bash(python -X utf8 -c:*)"
     ]
   }
 }

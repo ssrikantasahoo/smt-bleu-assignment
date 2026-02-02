@@ -155,56 +155,59 @@ class ToyDecoder:
     def decode(self, source_sentence: str) -> str:
         """
         Decode source sentence to target sentence.
-        
+
         Simplified decoding:
-        1. Tokenize source
+        1. Tokenize source (strip punctuation)
         2. Try to match phrases (longer phrases first)
         3. Use beam search to score hypotheses
         4. Return best hypothesis
-        
+
         Args:
             source_sentence: English input sentence
-            
+
         Returns:
             Hindi translation
         """
-        source_tokens = source_sentence.lower().strip().split()
-        
+        # Strip punctuation from tokens for better phrase table matching
+        raw_tokens = source_sentence.lower().strip().split()
+        source_tokens = []
+        for token in raw_tokens:
+            cleaned = token.strip('.,!?;:"\'-()[]{}')
+            if cleaned:
+                source_tokens.append(cleaned)
+
         if not source_tokens:
             return ""
-        
-        # Initialize beam with empty hypothesis
-        beam = [Hypothesis([], 0.0, [False] * len(source_tokens))]
-        
-        # For simplicity, use greedy phrase matching
-        # In production, would explore all phrase segmentations
+
+        # Greedy phrase matching (longest match first)
+        # In production SMT, beam search explores all phrase segmentations
         translation = []
         i = 0
-        
+
         while i < len(source_tokens):
-            # Try to match longest phrase first (up to 3 words)
             matched = False
-            
-            for phrase_len in range(min(3, len(source_tokens) - i), 0, -1):
+
+            # Try longest phrase first (up to 4 words)
+            for phrase_len in range(min(4, len(source_tokens) - i), 0, -1):
                 phrase = ' '.join(source_tokens[i:i+phrase_len])
                 translations = self.phrase_table.get_translations(phrase)
-                
+
                 if translations:
                     # Choose translation with highest probability
                     best_trans = max(translations, key=lambda x: x['prob'])
-                    
-                    if best_trans['phrase']:  # Not empty translation
+
+                    if best_trans['phrase']:  # Skip empty translations (e.g., "the" in Hindi)
                         translation.append(best_trans['phrase'])
-                    
+
                     i += phrase_len
                     matched = True
                     break
-            
+
             if not matched:
-                # No phrase match, use word as-is
+                # No phrase match, keep source word as-is (OOV)
                 translation.append(source_tokens[i])
                 i += 1
-        
+
         # Join translation
         result = ' '.join(translation)
         return result

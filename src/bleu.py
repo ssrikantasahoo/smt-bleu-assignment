@@ -11,16 +11,24 @@ from typing import List, Tuple, Dict
 
 def tokenize(text: str) -> List[str]:
     """
-    Simple tokenization by splitting on whitespace.
-    For production, use language-specific tokenizers.
-    
+    Tokenize text for BLEU evaluation.
+
+    Strips punctuation and splits on whitespace, following standard BLEU
+    preprocessing practice. This ensures punctuation differences between
+    candidate and reference do not unfairly penalize scores.
+
     Args:
         text: Input text string
-        
+
     Returns:
-        List of tokens (words)
+        List of tokens (words, without punctuation)
     """
-    return text.strip().split()
+    import re
+    # Remove punctuation characters (standard BLEU preprocessing)
+    text = re.sub(r'[.,!?;:"\'\-\(\)\[\]\{\}।]', ' ', text)
+    # Split on whitespace and filter empty tokens
+    tokens = [t for t in text.strip().split() if t]
+    return tokens
 
 
 def get_ngrams(tokens: List[str], n: int) -> List[Tuple[str, ...]]:
@@ -143,23 +151,34 @@ def compute_brevity_penalty(candidate: str, references: List[str]) -> Tuple[floa
     return bp, c, r
 
 
-def compute_bleu(candidate: str, references: List[str], max_n: int = 4) -> Dict:
+def compute_bleu(
+    candidate: str,
+    references: List[str],
+    max_n: int = 4,
+    smoothing: bool = False,
+    smooth_eps: float = 1e-9
+) -> Dict:
     """
     Compute BLEU score with all intermediate statistics.
-    
+
     BLEU = BP * exp(sum_{n=1}^{N} w_n * log(p_n))
-    
+
     where:
     - BP = brevity penalty
     - p_n = modified n-gram precision
     - w_n = uniform weights (1/N for each n)
-    - N = max_n (typically 4)
-    
+    - N = effective max_n (min of max_n and candidate length)
+
+    For sentence-level evaluation, uses effective_max_n to avoid penalizing
+    short candidates for missing higher-order n-grams (Chen & Cherry, 2014).
+
     Args:
         candidate: Candidate translation
         references: List of reference translations (can be multiple)
         max_n: Maximum n-gram order (default 4 for BLEU-4)
-        
+        smoothing: Whether to apply epsilon smoothing to zero precisions
+        smooth_eps: Epsilon value used when smoothing is enabled
+
     Returns:
         Dictionary containing:
         - bleu_score: Cumulative BLEU score
@@ -173,11 +192,11 @@ def compute_bleu(candidate: str, references: List[str], max_n: int = 4) -> Dict:
     """
     # Compute brevity penalty
     bp, c, r = compute_brevity_penalty(candidate, references)
-    
+
     # Compute modified precisions for n=1 to max_n
     precisions = []
     ngram_stats = []
-    
+
     for n in range(1, max_n + 1):
         clipped_count, total_count, precision = compute_modified_precision(candidate, references, n)
         precisions.append(precision)
@@ -187,19 +206,31 @@ def compute_bleu(candidate: str, references: List[str], max_n: int = 4) -> Dict:
             'total_count': total_count,
             'precision': precision
         })
-    
-    # Compute cumulative BLEU score (geometric mean of precisions)
-    # Use log-space to avoid underflow
-    if all(p > 0 for p in precisions):
-        # Geometric mean: exp(sum(log(p_n)) / N)
-        log_precisions = [math.log(p) for p in precisions]
-        avg_log_precision = sum(log_precisions) / len(log_precisions)
-        bleu_score = bp * math.exp(avg_log_precision)
+
+    # Use effective_max_n: only consider n-gram orders where candidate has n-grams
+    # This prevents short sentences from getting BLEU=0 due to missing higher-order n-grams
+    effective_max_n = min(max_n, c) if c > 0 else 0
+    effective_precisions = precisions[:effective_max_n]
+
+    # Compute cumulative BLEU score (geometric mean of effective precisions).
+    # Optional epsilon smoothing is useful for sentence-level comparison when
+    # one or more effective n-gram precisions are zero.
+    if effective_max_n > 0:
+        if smoothing:
+            safe_precisions = [p if p > 0 else smooth_eps for p in effective_precisions]
+            log_precisions = [math.log(p) for p in safe_precisions]
+            avg_log_precision = sum(log_precisions) / len(log_precisions)
+            bleu_score = bp * math.exp(avg_log_precision)
+        elif all(p > 0 for p in effective_precisions):
+            log_precisions = [math.log(p) for p in effective_precisions]
+            avg_log_precision = sum(log_precisions) / len(log_precisions)
+            bleu_score = bp * math.exp(avg_log_precision)
+        else:
+            bleu_score = 0.0
     else:
-        # If any precision is 0, BLEU is 0
         bleu_score = 0.0
-    
-    # Compute individual BLEU-n scores
+
+    # Compute individual BLEU-n scores (BP * precision_n)
     bleu_scores_individual = {}
     for i, n in enumerate(range(1, max_n + 1)):
         if precisions[i] > 0:
@@ -207,7 +238,7 @@ def compute_bleu(candidate: str, references: List[str], max_n: int = 4) -> Dict:
         else:
             bleu_n = 0.0
         bleu_scores_individual[f'bleu_{n}'] = bleu_n
-    
+
     result = {
         'bleu_score': bleu_score,
         **bleu_scores_individual,
@@ -218,11 +249,17 @@ def compute_bleu(candidate: str, references: List[str], max_n: int = 4) -> Dict:
         'reference_length': r,
         'ngram_stats': ngram_stats
     }
-    
+
     return result
 
 
-def compute_corpus_bleu(candidates: List[str], references_list: List[List[str]], max_n: int = 4) -> Dict:
+def compute_corpus_bleu(
+    candidates: List[str],
+    references_list: List[List[str]],
+    max_n: int = 4,
+    smoothing: bool = False,
+    smooth_eps: float = 1e-9
+) -> Dict:
     """
     Compute corpus-level BLEU score.
     
@@ -233,6 +270,8 @@ def compute_corpus_bleu(candidates: List[str], references_list: List[List[str]],
         candidates: List of candidate translations
         references_list: List of reference lists (one list per candidate)
         max_n: Maximum n-gram order
+        smoothing: Whether to apply epsilon smoothing to zero precisions
+        smooth_eps: Epsilon value used when smoothing is enabled
         
     Returns:
         Dictionary with corpus BLEU and statistics
@@ -272,7 +311,12 @@ def compute_corpus_bleu(candidates: List[str], references_list: List[List[str]],
         bp = math.exp(1 - total_r / total_c)
     
     # Compute corpus BLEU
-    if all(p > 0 for p in precisions):
+    if smoothing:
+        safe_precisions = [p if p > 0 else smooth_eps for p in precisions]
+        log_precisions = [math.log(p) for p in safe_precisions]
+        avg_log_precision = sum(log_precisions) / len(log_precisions)
+        bleu_score = bp * math.exp(avg_log_precision)
+    elif all(p > 0 for p in precisions):
         log_precisions = [math.log(p) for p in precisions]
         avg_log_precision = sum(log_precisions) / len(log_precisions)
         bleu_score = bp * math.exp(avg_log_precision)
@@ -289,7 +333,12 @@ def compute_corpus_bleu(candidates: List[str], references_list: List[List[str]],
 
 
 # Convenience functions for testing
-def bleu_score(candidate: str, references: List[str]) -> float:
+def bleu_score(
+    candidate: str,
+    references: List[str],
+    smoothing: bool = False,
+    smooth_eps: float = 1e-9
+) -> float:
     """Quick function to get just the BLEU score"""
-    result = compute_bleu(candidate, references)
+    result = compute_bleu(candidate, references, smoothing=smoothing, smooth_eps=smooth_eps)
     return result['bleu_score']

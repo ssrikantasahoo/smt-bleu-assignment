@@ -739,3 +739,46 @@ Documentation:
 ---
 
 **End of Report**
+
+
+---
+
+## Rubric Compliance Addendum (Final)
+
+### A. UI and Evaluation Evidence
+The Streamlit interface in `app/streamlit_app.py` explicitly provides:
+- source text input textbox
+- reference selection/upload/manual entry
+- candidate translations per system
+- overall BLEU score
+- 1-gram to 4-gram precision table
+- multi-candidate BLEU comparison
+
+### B. SMT Components and Translation Path
+The implementation documents and uses:
+- phrase table (`data/phrase_table.json` + `src/toy_smt.py`)
+- language model (`data/hindi_trigram_lm.json` + `src/toy_smt.py`)
+- decoder (`ToyDecoder` beam-style phrase decoding)
+- Moses interface (`src/moses_interface.py`) with environment-based configuration
+
+### C. Moses Verification Procedure
+To provide direct operational evidence for grading, run:
+
+```bash
+python scripts/validate_moses.py --source "Hello, how are you?"
+```
+
+If `MOSES_BIN_PATH` and `MOSES_INI_PATH` are valid, the script prints `Validation result: PASS` and a non-empty translation.
+
+### D. BLEU Methodological Note
+BLEU is implemented from scratch in `src/bleu.py`, including:
+- modified n-gram precision with clipping
+- brevity penalty
+- sentence-level and corpus-level aggregation
+
+An optional sentence-level epsilon smoothing mode is now available (UI toggle + scorer support), and is reported explicitly when used.
+
+### E. Reproducibility
+- Unit tests: `pytest tests/test_bleu.py -q`
+- UI execution: `streamlit run app/streamlit_app.py`
+- Moses validation: `python scripts/validate_moses.py`

@@ -434,6 +434,25 @@ python src/word_by_word.py
 python src/moses_interface.py
 ```
 
+### Moses Validation for Assignment Submission
+
+Use this command before taking final screenshots for the "Moses or equivalent SMT"
+requirement:
+
+```bash
+python scripts/validate_moses.py --source "Hello, how are you?"
+```
+
+Expected: `Validation result: PASS` with non-empty translation output.
+
+### BLEU Smoothing (Sentence-Level)
+
+The Streamlit app provides an optional BLEU smoothing toggle:
+- `Disabled`: strict BLEU (zeros propagate to cumulative BLEU)
+- `Enabled`: epsilon smoothing for short-sentence comparison
+
+For final reporting, mention which mode was used.
+
 ---
 
 ## Configuration
@@ -607,14 +626,4 @@ opus_read -d OpenSubtitles -s en -t hi -w corpus -wm moses
 - **BLEU Paper**: Papineni et al. (2002) - "BLEU: a Method for Automatic Evaluation of Machine Translation"
 - **Hindi NLP**: https://github.com/anoopkunchukuttan/indic_nlp_library
 
----
-
-## Credits
-
-**Developed for:** Assignment 2 - Statistical Machine Translation with BLEU Evaluation  
-**Language Pair:** English → Hindi  
-**Author:** Srikanta Sahoo  
-**Date:** January 2026
-
----
 
